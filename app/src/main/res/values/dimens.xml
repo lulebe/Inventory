@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="addbox_translation">-220dp</dimen>
+    <dimen name="additem_translation">-220dp</dimen>
+    <dimen name="additem_translation_prelaunch">-300dp</dimen>
+</resources>

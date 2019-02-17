@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBG">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:paddingTop="80dp"/>
+
+    <TextView
+            android:id="@+id/tv_emptyinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This box has no items..\n\nClick + to add one."
+            android:padding="48dp"
+            android:gravity="center" />
+
+    <View
+            android:id="@+id/v_dropdown_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:alpha="0"
+            android:background="#000"/>
+
+    <FrameLayout
+            android:id="@+id/l_additem"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:paddingTop="60dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:elevation="8dp"
+            android:translationY="@dimen/additem_translation_prelaunch">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="112dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                    android:text="Add an Item"
+                    android:fontFamily="@font/roboto_condensed_regular"/>
+
+            <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
+                        android:id="@+id/et_additem_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="item name"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/dropdown_handle"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:rotation="45"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="12dp">
+            <ImageView
+                    android:id="@+id/iv_btn_additem"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:rotation="-45"
+                    android:src="@drawable/ic_add_black_24dp"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
